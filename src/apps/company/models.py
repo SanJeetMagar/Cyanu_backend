@@ -31,3 +31,16 @@ class OutreachNumber(models.Model):
     class Meta:
         verbose_name = 'OutrangeNumber'
         verbose_name_plural = "OutrangeNumber"                                                                                                                                                                                                                                                                                                                                                
+
+
+
+class ContactInfo(models.Model):
+    full_name = models.CharField(max_length=255)
+    email = models.EmailField(blank= False, unique= True)
+    inquiry_type = models.CharField(max_length=255)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.full_name
+
+    

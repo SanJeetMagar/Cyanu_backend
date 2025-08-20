@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CompanyInfo, OutreachNumber
+from .models import CompanyInfo, OutreachNumber, ContactInfo
 
 class CompanyInfoSerializer(serializers.ModelSerializer):
     class Meta:
@@ -11,3 +11,10 @@ class OutreachNumberSerializers(serializers.ModelSerializer):
     class Meta:
         model = OutreachNumber
         fields = "__all__"
+
+
+
+class ContactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ContactInfo
+        fields = '__all__'

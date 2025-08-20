@@ -12,10 +12,13 @@ class BaseModel(models.Model):
     
 
 class BlogPost(BaseModel):
-    author = models.ForeignKey()
+    # author = models.ForeignKey()
     title = models.CharField(max_length=100)
     description = models.TextField()
+    image = models.ImageField(upload_to="blog_images",blank= True, null= True)
 
     def __str__(self):
         return self.title
+    
+
     
