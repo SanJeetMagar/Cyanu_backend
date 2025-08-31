@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'src.apps.company',
     'src.apps.blog',
+    'src.apps.chat',
 ]
 
 MIDDLEWARE = [
